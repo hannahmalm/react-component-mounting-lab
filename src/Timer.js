@@ -7,6 +7,17 @@ class Timer extends Component {
   };
 
   // add your code here
+  //set the interval from the code along, selt the click tok function to add 1000
+  //this should mount and render
+  componentDidMount() {
+    this.interval = setInterval(this.clockTick, 1000)
+  }
+  
+  //To clear an interval, we use the built in clearInterval method, passing in the local variable:
+  //Write a componentWillUnmount method in Timer that cleans up the interval you've created.
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
 
   render() {
     const { time, color } = this.state;

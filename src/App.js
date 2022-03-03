@@ -10,14 +10,13 @@ class App extends Component {
   }
 
 
-  //Your code here:
+  //Your code here: In App, write a componentDidMount method that invokes the existing handleAddTimer class method.
+  //Since App is the top level component, its componentDidMount method will be invoked before any other child components are even constructed.
+  // Using componentDidMount is instead reserved for taking initial actions within an app. --> Like rendering everyting including getting API data
 
-
-
-
-
-
-
+  componentDidMount() {
+    this.handleAddTimer()
+  }
 
 
   // No need to modify anything in render or the class methods below
